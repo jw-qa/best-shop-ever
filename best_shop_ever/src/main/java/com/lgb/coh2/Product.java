@@ -6,14 +6,22 @@ public class Product {
 	private int quantity;
 	private String description;
 	boolean hasWarranty;
+	double vat;
 	
-	public Product(String productName, double price, int quantity, String description, boolean hasWarranty) {
+	public Product(String productName, double price, int quantity, String description, boolean hasWarranty, double vat) {
 		super();
 		this.productName = productName;
 		this.price = price;
 		this.quantity = quantity;
 		this.description = description;
 		this.hasWarranty = hasWarranty;
+		this.vat = vat;
+	}
+	protected double getVat() {
+		return vat;
+	}
+	protected void setVat(double vat) {
+		this.vat = vat;
 	}
 	protected String getProductName() {
 		return productName;
