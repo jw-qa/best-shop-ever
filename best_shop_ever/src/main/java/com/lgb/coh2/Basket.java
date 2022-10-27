@@ -4,15 +4,21 @@ import java.util.ArrayList;
 
 public class Basket {
 	
-	private ArrayList<String> basket=new ArrayList<String>();
+	private ArrayList<Item> basket=new ArrayList<Item>();
 
-	protected ArrayList<String> getBasket() {
+	protected ArrayList<Item> getBasket() {
 		return basket;
 	}
 
-	protected void ammendBasket(ArrayList<String> basket) {
-		this.basket = basket;
+	protected void addToBasket(Item anItem) {
+		
+		basket.add(anItem);
 	} 
+	
+	protected int getTotalItems()
+	{
+		return basket.size();
+	}
 	
 	
 	
